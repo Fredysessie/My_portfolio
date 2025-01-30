@@ -1,4 +1,4 @@
-# My-Portfolio
+# My-portfolio
 
 Bienvenue sur mon portfolio ! Ce repository contient une application Shiny qui présente mon parcours professionnel, académique, ainsi que mes compétences et projets réalisés. Vous y trouverez des informations détaillées sur mes expériences en analyse de crédits, gestion des risques financiers, et développement de solutions analytiques avec R.
 
@@ -34,12 +34,12 @@ Pour exécuter cette application Shiny localement, suivez ces étapes :
 
 1. Clonez ce repository :  
    ```bash
-   git clone https://github.com/votre-utilisateur/My-Portfolio.git
+   git clone https://github.com/votre-utilisateur/My-portfolio.git
    ```
 
 2. Accédez au répertoire du projet :  
    ```bash
-   cd My-Portfolio
+   cd My-portfolio
    ```
 
 3. Installez les packages R nécessaires :  
