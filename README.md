@@ -34,7 +34,7 @@ Pour exécuter cette application Shiny localement, suivez ces étapes :
 
 1. Clonez ce repository :  
    ```bash
-   git clone https://github.com/votre-utilisateur/My-portfolio.git
+   git clone https://github.com/Fredysessie/My-portfolio.git
    ```
 
 2. Accédez au répertoire du projet :  
