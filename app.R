@@ -1350,7 +1350,7 @@ server <- function(input, output, session) {
       "CV_Frederic_SESSIE.pdf"
     },
     content = function(file) {
-      file.copy("CV_Frederic SESSIE_Analyste Credits.pdf", file)
+      file.copy("data/CV_Frederic SESSIE_Analyste Credits.pdf", file)
     }
   )
 
