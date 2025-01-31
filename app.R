@@ -884,12 +884,13 @@ ui <- fluidPage(
             ),
             br(),
             h4("Analyste risque et ingénieur financier", style = "color: #1c116c;"),
-            p("FASEG Investment Club, 08/2022 - 09/2023", style = "font-weight: bold;"),
+            p("Banque de Dakar, 08/2022 - 09/2023", style = "font-weight: bold;"),
             tags$ul(
-              tags$li("Gestion du risque et optimisation du portefeuille."),
+              tags$li("Gestion du risque et optimisation du portefeuille avec VBA Excel"),
               tags$li("Analyser et cartographier les risques"),
               tags$li("Participer aux reportings hebdomadaires."),
-              tags$li("Déployer les fonctionnalités avancées de mon package R BRVM pour enrichir la plateforme de SUNUFinance en cours de développement."),
+              tags$li("Évaluer la solvabilité des clients et gérer les risques de crédit"),
+              tags$li("Modéliser la probabilité de défaut de paiement (modèle de scoring)"),
               br()
             )
           )
