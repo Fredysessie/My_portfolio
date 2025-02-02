@@ -759,7 +759,6 @@ ui <- fluidPage(
       p(HTML("À l'écoute de nouvelles opportunités, je suis déterminé à m'investir pleinement dans toutes les missions qui me seront confiées et à vous apporter une valeur ajoutée significative."),
         style = "text-align: justify;"),
       br(),
-      # p("Postes recherchés :", style = "color: #1c116c; font-weight: bold; font-size: 1.3em;"),
       p(HTML('<span style="color: #1c116c; font-size: 1.25em; font-weight: bold;">Postes recherchés </span> :')),
       tags$ul(
         style = "margin-left: 20px; text-align: justify;",
@@ -776,75 +775,15 @@ ui <- fluidPage(
         style = "margin-top: 10px; font-weight: bold;"),
 
       br(),
-      # h3("Liens", style = "color: #1c116c;"),
-      # div(
-      #   class = "sidebar-links",
-      #   tags$ul(
-      #     style = "list-style: none; padding-left: 0;",
-      #     tags$li(icon("linkedin"), a("LinkedIn", href = "https://www.linkedin.com/in/sk-fred/", target = "_blank")),
-      #     tags$li(icon("github"), a("GitHub (BRVM)", href = "https://github.com/Koffi-Fredysessie/BRVM", target = "_blank")),
-      #     tags$li(icon("github"), a("GitHub (Euronext)", href = "https://github.com/Fredysessie/Euronext", target = "_blank")),
-      #     tags$li(icon("r-project"), a("Rpubs", href = "https://rpubs.com/Fredysessie", target = "_blank"))
-      #   )
-      # ),
       div(
         style = "text-align: center; margin-top: 20px;",
         downloadButton("download_cv", "Télécharger le CV", class = "btn btn-primary")
       )
-      # downloadButton("download_cv", "Télécharger le CV", class = "btn btn-primary", align = "center")
     ),
 
     mainPanel(
       tabsetPanel(
         id = "tabs",
-        # tabPanel(
-        #   # "Expériences",
-        #   "EXPÉRIENCES",
-        #   br(),
-        #   h4("Analyste financier et Analyste crédit", style = "color: #1c116c;"),
-        #   p("Volkswagen BANK, 07/2024 - 12/2024", style = "font-weight: bold;"),
-        #   tags$ul(
-        #     tags$li("Évaluer le niveau de risque des partenaires financiers."),
-        #     tags$li("Analyse approfondie des liasses fiscales, rapports consolidés."),
-        #     tags$li("Attribuer des ratings financiers et des lignes de financement.")
-        #   ),
-        #   br(),
-        #   h4("Analyste financier - Création & Développement de packages financiers R", style = "color: #1c116c;"),
-        #   p("Projet d'entrepreneuriat, 02/2023-03/2024", style = "font-weight: bold;"),
-        #   # Euronext section
-        #   div(
-        #     style = "margin-left: 20px;",
-        #     p("Euronext (2024) :", style = "font-weight: bold; margin-bottom: 10px;"),
-        #     tags$ul(
-        #       tags$li("Outil avancé pour récupérer, traiter et analyser les données financières"),
-        #       tags$li("Calculer les ratios financiers (liquidité et solvabilité) des sociétés cotées"),
-        #       tags$li("Faciliter les analyses approfondies"),
-        #       tags$li("Aide à la prise de décisions éclairées (achat, vente ou conservation d'actions)")
-        #     )
-        #   ),
-        #
-        #   # BRVM section
-        #   div(
-        #     style = "margin-left: 20px;",
-        #     p("BRVM - Bourse Régionale des Valeurs Mobilières (2023) :",
-        #       style = "font-weight: bold; margin-bottom: 10px; margin-top: 15px;"),
-        #     tags$ul(
-        #       tags$li("Similaire à Euronext mais spécifique aux données de la BRVM"),
-        #       tags$li("Faciliter les analyses fondamentales et technique")
-        #     )
-        #   ),
-        #   br(),
-        #   h4("Analyste risque et ingénieur financier", style = "color: #1c116c;"),
-        #   p("FASEG Investment Club, 08/2022 - 09/2023", style = "font-weight: bold;"),
-        #   tags$ul(
-        #     tags$li("Gestion du risque et optimisation du portefeuille."),
-        #     tags$li("Analyser et cartographier les risques"),
-        #     tags$li("Participer aux reportings hebdomadaires."),
-        #     tags$li("Déployer les fonctionnalités avancées de mon package R BRVM pour enrichir la plateforme de SUNUFinance en cours de développement.")
-        #     # ,
-        #     # tags$li(""),
-        #   )
-        # ),
         tabPanel(
           "EXPÉRIENCES",
           div(
@@ -1420,16 +1359,6 @@ server <- function(input, output, session) {
       )
     )
 
-    # cards <- lapply(projects, function(project) {
-    #   div(
-    #     class = "project-card",
-    #     tags$img(src = project$image),
-    #     h4(project$title),
-    #     p(project$description),
-    #     if (!is.null(project$link)) tags$a(href = project$link, target = "_blank", "Voir le projet")
-    #   )
-    # })
-
     cards <- lapply(projects, function(project) {
       div(
         class = "project-card",
@@ -1472,15 +1401,6 @@ server <- function(input, output, session) {
         description = "Plateforme complète d'analyse de la BRVM"
       )
     )
-
-    # cards <- lapply(future_projects, function(project) {
-    #   div(
-    #     class = "project-card",
-    #     tags$img(src = project$image),
-    #     h4(project$title),
-    #     p(project$description)
-    #   )
-    # })
 
     cards <- lapply(future_projects, function(project) {
       div(
@@ -1627,17 +1547,6 @@ server <- function(input, output, session) {
       )
     )
   })
-
-  # Compteur de caractères pour le message
-  # output$message_counter <- renderText({
-  #   current_length <- nchar(input$contact_message)
-  #   if(current_length < 35) {
-  #     sprintf("Encore %d caractères minimum", 35 - current_length)
-  #   } else {
-  #     # sprintf("%d caractères", current_length)
-  #     ""
-  #   }
-  # })
 
   # Gérer l'envoi du formulaire
   observeEvent(input$send_mail, {
